@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeevan | Software Developer Portfolio</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Inter Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Configuration for Tailwind (using Inter font) -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'primary': '#0D9488', // Teal
+                        'secondary': '#111827', // Dark Slate
+                        'background-light': '#F9FAFB',
+                        'background-dark': '#1F2937',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom styles for smooth scrolling and general look */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="font-sans bg-background-light text-gray-800">
+
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-extrabold text-primary">Jeevan.dev</a>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#about" class="text-gray-600 hover:text-primary transition duration-300">About</a>
+                <a href="#skills" class="text-gray-600 hover:text-primary transition duration-300">Skills</a>
+                <a href="#contact" class="text-gray-600 hover:text-primary transition duration-300">Contact</a>
+            </nav>
+            <!-- Mobile Menu Placeholder (Not fully implemented, but responsive structure is maintained) -->
+            <button class="md:hidden text-gray-600 hover:text-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="bg-secondary text-white py-20 md:py-32">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-4 leading-tight">
+                Hi, I'm <span class="text-primary">Jeevan</span>.
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 font-light text-gray-300">
+                Passionate Software Developer | Cyber Security & Cloud Enthusiast
+            </p>
+            <a href="#contact" class="inline-block bg-primary text-white font-semibold py-3 px-8 rounded-xl shadow-lg hover:bg-teal-600 transition duration-300 transform hover:scale-105">
+                Let's Connect
+            </a>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="py-16 md:py-24 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-secondary mb-10 text-center">About Me</h2>
+            <div class="bg-background-light p-6 md:p-10 rounded-2xl shadow-lg border-t-4 border-primary">
+                <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                    Based in **Thrissur**, I am a passionate and dedicated **Software Developer** with 1 year of hands-on experience in building robust and secure applications. My journey is driven by a strong focus on two critical domains: **Cyber Security** and **Cloud Infrastructure**.
+                </p>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    I believe in developing code that is not only functional and scalable but also resilient against modern threats. Whether it's securing application layers or deploying services efficiently on the cloud, I strive to combine best practices in development with a security-first mindset. I am eager to contribute my skills and continue growing in dynamic technical environments.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-16 md:py-24 bg-background-light">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-secondary mb-12 text-center">Core Competencies & Tech Stacks</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Skill Card 1: Cyber Security -->
+                <div class="bg-white p-6 rounded-xl shadow-xl transition duration-300 hover:shadow-2xl border-b-4 border-red-500">
+                    <div class="flex items-center mb-4">
+                        <span class="text-3xl text-red-500 mr-3">🔒</span>
+                        <h3 class="text-xl font-bold text-secondary">Cyber Security</h3>
+                    </div>
+                    <p class="text-gray-600">
+                        Experience in implementing secure coding practices, vulnerability assessment, authentication mechanisms (OAuth/JWT), and data protection strategies.
+                    </p>
+                </div>
+
+                <!-- Skill Card 2: Cloud Technologies -->
+                <div class="bg-white p-6 rounded-xl shadow-xl transition duration-300 hover:shadow-2xl border-b-4 border-blue-500">
+                    <div class="flex items-center mb-4">
+                        <span class="text-3xl text-blue-500 mr-3">☁️</span>
+                        <h3 class="text-xl font-bold text-secondary">Cloud Platforms</h3>
+                    </div>
+                    <p class="text-gray-600">
+                        Familiarity with major cloud providers (e.g., AWS/Azure/GCP), containerization with Docker, and CI/CD pipelines for automated deployment.
+                    </p>
+                </div>
+
+                <!-- Skill Card 3: Software Development -->
+                <div class="bg-white p-6 rounded-xl shadow-xl transition duration-300 hover:shadow-2xl border-b-4 border-primary">
+                    <div class="flex items-center mb-4">
+                        <span class="text-3xl text-primary mr-3">💻</span>
+                        <h3 class="text-xl font-bold text-secondary">Development Stacks</h3>
+                    </div>
+                    <p class="text-gray-600">
+                        Proficient in modern programming languages (e.g., Python, JavaScript) and experience with database management (SQL/NoSQL).
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- Detailed Skills List (Optional but good for SEO/detail) -->
+            <div class="mt-12">
+                <h3 class="text-2xl font-bold text-secondary mb-6 text-center">Technical Snapshot</h3>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <span class="bg-primary/10 text-primary font-medium px-4 py-2 rounded-full text-sm shadow-md">Python</span>
+                    <span class="bg-primary/10 text-primary font-medium px-4 py-2 rounded-full text-sm shadow-md">JavaScript / Node.js</span>
+                    <span class="bg-primary/10 text-primary font-medium px-4 py-2 rounded-full text-sm shadow-md">AWS/GCP Basics</span>
+                    <span class="bg-primary/10 text-primary font-medium px-4 py-2 rounded-full text-sm shadow-md">Docker</span>
+                    <span class="bg-primary/10 text-primary font-medium px-4 py-2 rounded-full text-sm shadow-md">Linux</span>
+                    <span class="bg-primary/10 text-primary font-medium px-4 py-2 rounded-full text-sm shadow-md">Web Security (OWASP)</span>
+                    <span class="bg-primary/10 text-primary font-medium px-4 py-2 rounded-full text-sm shadow-md">REST APIs</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 md:py-24 bg-white">
+        <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-bold text-secondary mb-4">Get In Touch</h2>
+            <p class="text-lg text-gray-600 mb-10">
+                I'm currently open to new opportunities and collaborations. Feel free to reach out!
+            </p>
+
+            <!-- Mock Contact Form (can be wired to a service later) -->
+            <div class="p-8 bg-background-light rounded-2xl shadow-xl">
+                <form class="space-y-6">
+                    <div>
+                        <input type="text" placeholder="Your Name" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary transition duration-300" required>
+                    </div>
+                    <div>
+                        <input type="email" placeholder="Your Email" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary transition duration-300" required>
+                    </div>
+                    <div>
+                        <textarea placeholder="Message / Project Details" rows="4" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary transition duration-300" required></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-secondary text-white font-semibold py-3 rounded-lg shadow-lg hover:bg-gray-700 transition duration-300 transform hover:scale-[1.01]">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+
+            <div class="mt-8 space-y-2">
+                <p class="text-gray-700">Email: <a href="mailto:jeevan.developer@example.com" class="text-primary hover:underline">jeevan.developer@example.com</a></p>
+                <!-- Add social links here if desired -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-secondary text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-gray-400">&copy; 2024 Jeevan. Made with passion from Thrissur.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
