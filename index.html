@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jeevan | Software Developer Portfolio (Neon)</title>
+    <title>Jeevan | Software Developer Portfolio (Professional Dark Mode)</title>
     <!-- Load Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Load Inter Font -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;900&display=swap" rel="stylesheet">
     
-    <!-- Configuration for Tailwind (using Inter font and Neon colors) -->
+    <!-- Configuration for Tailwind (using Inter font and Dark/Vibrant colors) -->
     <script>
         tailwind.config = {
             theme: {
@@ -18,11 +18,11 @@
                         sans: ['Inter', 'sans-serif'],
                     },
                     colors: {
-                        'primary': '#00FFFF', // Electric Cyan
-                        'secondary': '#FF00FF', // Electric Magenta
-                        'text-light': '#E5E7EB', // Light gray text
-                        'background': '#030712', // Deep near-black background
-                        'subtle-dark': '#1F2937', // Slightly lighter dark background
+                        'primary': '#00C2C2', // Professional Teal/Aqua
+                        'secondary': '#C061CB', // Vibrant Purple
+                        'text-light': '#C8D0E0', // Main light text
+                        'background': '#12122A', // Deep Navy/Charcoal background
+                        'subtle-dark': '#1F2944', // Slightly lighter dark background
                     }
                 }
             }
@@ -30,72 +30,50 @@
     </script>
     
     <style>
-        /* Custom styles for smooth scrolling */
+        /* Custom styles for smooth scrolling and reducing glow */
         html {
             scroll-behavior: smooth;
         }
 
-        /* Set CSS variables from Tailwind config for use in custom shadows */
+        /* Set CSS variables for subtle professional accent */
         :root {
-            --tw-primary: #00FFFF;
-            --tw-secondary: #FF00FF;
+            --tw-primary: #00C2C2;
+            --tw-secondary: #C061CB;
         }
 
-        /* Custom Neon Glow Effect for text and elements */
-        .neon-glow-text {
-            /* Cyan Glow */
-            text-shadow: 0 0 4px var(--tw-primary), 0 0 8px var(--tw-primary);
-        }
-        .neon-glow-text-secondary {
-            /* Magenta Glow */
-            text-shadow: 0 0 4px var(--tw-secondary), 0 0 8px var(--tw-secondary);
+        /* Subtle Glow/Accent for titles (less intense than neon) */
+        .subtle-accent-text {
+            text-shadow: 0 0 2px var(--tw-primary);
         }
         
-        .neon-border-light {
-            box-shadow: 0 0 5px var(--tw-primary);
+        /* Card Hover Effect (Less Glow, more defined border/shadow) */
+        .card-accent-hover {
+            transition: all 0.3s ease;
+            border: 1px solid rgba(192, 97, 203, 0.2); /* Subtle starting border */
         }
         
-        /* Card Glow for Cyan elements */
-        .neon-card-glow {
-            transition: all 0.3s ease;
-            border: 1px solid rgba(0, 255, 255, 0.2);
-        }
-        .neon-card-glow:hover {
-            box-shadow: 0 0 10px var(--tw-primary), 0 0 20px rgba(0, 255, 255, 0.4);
-            border-color: var(--tw-primary);
-            transform: translateY(-2px);
-        }
-
-        /* Card Glow for Magenta elements */
-        .neon-card-glow-secondary {
-            transition: all 0.3s ease;
-            border: 1px solid rgba(255, 0, 255, 0.2);
-        }
-        .neon-card-glow-secondary:hover {
-            box-shadow: 0 0 10px var(--tw-secondary), 0 0 20px rgba(255, 0, 255, 0.4);
+        .card-accent-hover:hover {
+            box-shadow: 0 0 15px rgba(192, 97, 203, 0.4);
             border-color: var(--tw-secondary);
             transform: translateY(-2px);
-        }
-        
-        /* Button Glow for primary action */
-        .neon-button-glow {
-            box-shadow: 0 0 5px var(--tw-primary), 0 0 10px rgba(0, 255, 255, 0.8);
-            transition: all 0.3s ease;
+            background-color: #24244F; /* Darker background on hover for depth */
         }
 
-        .neon-button-glow:hover {
-            box-shadow: 0 0 10px var(--tw-secondary), 0 0 20px rgba(255, 0, 255, 0.8);
-            background-color: var(--tw-secondary);
+        /* Button Accent Hover Effect */
+        .button-accent-hover {
+            transition: all 0.3s ease;
+        }
+        .button-accent-hover:hover {
+            box-shadow: 0 0 10px rgba(0, 194, 194, 0.6);
+            transform: translateY(-1px);
         }
 
         /* Tag styles for project section */
         .tag-primary {
-            @apply text-primary bg-primary/10 px-3 py-1 text-sm rounded-full font-medium border border-primary/50;
-            box-shadow: 0 0 2px var(--tw-primary);
+            @apply text-primary bg-primary/20 px-3 py-1 text-sm rounded-full font-medium border border-primary/50;
         }
         .tag-secondary {
-            @apply text-secondary bg-secondary/10 px-3 py-1 text-sm rounded-full font-medium border border-secondary/50;
-            box-shadow: 0 0 2px var(--tw-secondary);
+            @apply text-secondary bg-secondary/20 px-3 py-1 text-sm rounded-full font-medium border border-secondary/50;
         }
     </style>
 </head>
@@ -104,12 +82,12 @@
     <!-- Header Navigation -->
     <header class="sticky top-0 z-50 bg-background border-b border-subtle-dark">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold text-primary neon-glow-text">Jeevan.dev</a>
+            <a href="#" class="text-2xl font-bold text-primary">Jeevan.dev</a>
             <nav class="hidden md:flex space-x-10">
-                <a href="#about" class="text-gray-400 hover:text-primary transition duration-200 font-medium hover:neon-glow-text">About</a>
-                <a href="#skills" class="text-gray-400 hover:text-primary transition duration-200 font-medium hover:neon-glow-text">Skills</a>
-                <a href="#projects" class="text-gray-400 hover:text-secondary transition duration-200 font-medium hover:neon-glow-text-secondary">Projects</a>
-                <a href="#contact" class="text-gray-400 hover:text-primary transition duration-200 font-medium hover:neon-glow-text">Contact</a>
+                <a href="#about" class="text-gray-400 hover:text-primary transition duration-200 font-medium">About</a>
+                <a href="#skills" class="text-gray-400 hover:text-primary transition duration-200 font-medium">Skills</a>
+                <a href="#projects" class="text-gray-400 hover:text-secondary transition duration-200 font-medium">Projects</a>
+                <a href="#contact" class="text-gray-400 hover:text-primary transition duration-200 font-medium">Contact</a>
             </nav>
             <!-- Mobile Menu Placeholder -->
             <button class="md:hidden text-gray-400 hover:text-primary p-2 rounded-md hover:bg-subtle-dark">
@@ -120,18 +98,18 @@
         </div>
     </header>
 
-    <!-- Hero Section (Dark and Glowing) -->
-    <section id="hero" class="bg-subtle-dark py-24 md:py-40 border-b border-primary neon-border-light">
+    <!-- Hero Section (Deep Dark and Focused) -->
+    <section id="hero" class="bg-subtle-dark py-24 md:py-40 border-b border-primary/40">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p class="text-lg font-light text-secondary mb-4 neon-glow-text-secondary">SOFTWARE DEVELOPMENT & SECURITY</p>
+            <p class="text-lg font-light text-secondary mb-4 subtle-accent-text">SOFTWARE DEVELOPMENT | CYBER SECURITY | CLOUD</p>
             <h1 class="text-6xl md:text-8xl font-extrabold mb-6 leading-tight text-text-light">
-                <span class="text-primary neon-glow-text">Jeevan</span>.
+                <span class="text-primary subtle-accent-text">Jeevan.</span>
             </h1>
             <p class="text-xl md:text-3xl mb-10 font-light text-gray-400 max-w-2xl mx-auto">
-                A dedicated developer from Thrissur, specializing in **Cyber Security** and **Cloud Infrastructure** with 1 year of hands-on experience.
+                Passionate developer from Thrissur with 1 year of experience, dedicated to building secure and scalable cloud infrastructure.
             </p>
-            <a href="#projects" class="inline-block bg-primary text-background font-bold py-3 px-10 rounded-lg border border-primary neon-button-glow transition duration-300">
-                VIEW PROJECTS
+            <a href="#projects" class="inline-block bg-primary text-background font-bold py-3 px-10 rounded-lg button-accent-hover transition duration-300">
+                EXPLORE WORK
             </a>
         </div>
     </section>
@@ -139,8 +117,8 @@
     <!-- About Me Section -->
     <section id="about" class="py-20 md:py-32 bg-background">
         <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-4xl font-extrabold text-primary mb-12 text-center neon-glow-text">About My Experience</h2>
-            <div class="space-y-6 text-lg text-gray-400 leading-relaxed border border-subtle-dark p-6 rounded-xl neon-card-glow-secondary">
+            <h2 class="text-4xl font-extrabold text-primary mb-12 text-center subtle-accent-text">About My Experience</h2>
+            <div class="space-y-6 text-lg text-gray-400 leading-relaxed border border-subtle-dark p-6 rounded-xl card-accent-hover">
                 <p>
                     With **1 year of focused experience**, my work revolves around building robust and scalable applications while maintaining a security-first approach. Based in **Thrissur**, I am committed to continuous learning in high-demand technical domains.
                 </p>
@@ -154,31 +132,31 @@
     <!-- Skills Section -->
     <section id="skills" class="py-20 md:py-32 bg-subtle-dark border-t border-b border-primary/20">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-4xl font-extrabold text-primary mb-16 text-center neon-glow-text">Technical Expertise</h2>
+            <h2 class="text-4xl font-extrabold text-secondary mb-16 text-center subtle-accent-text">Technical Expertise</h2>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 
-                <!-- Skill Card 1: Cyber Security (Neon Style) -->
-                <div class="bg-background p-8 rounded-xl neon-card-glow-secondary">
-                    <span class="text-3xl text-secondary mb-4 block neon-glow-text-secondary">🔒</span>
+                <!-- Skill Card 1: Cyber Security -->
+                <div class="bg-background p-8 rounded-xl card-accent-hover">
+                    <span class="text-3xl text-secondary mb-4 block">🔒</span>
                     <h3 class="text-xl font-bold text-text-light mb-2">Cyber Security Focus</h3>
                     <p class="text-gray-500 text-base">
                         Implementing secure coding practices, vulnerability assessments, and robust authentication mechanisms (OAuth, JWT) to protect application layers.
                     </p>
                 </div>
 
-                <!-- Skill Card 2: Cloud Technologies (Neon Style) -->
-                <div class="bg-background p-8 rounded-xl neon-card-glow">
-                    <span class="text-3xl text-primary mb-4 block neon-glow-text">☁️</span>
+                <!-- Skill Card 2: Cloud Technologies -->
+                <div class="bg-background p-8 rounded-xl card-accent-hover">
+                    <span class="text-3xl text-primary mb-4 block">☁️</span>
                     <h3 class="text-xl font-bold text-text-light mb-2">Cloud Infrastructure</h3>
                     <p class="text-gray-500 text-base">
                         Experience with major cloud providers (AWS/GCP), DevOps tools like Docker, and setting up automated CI/CD pipelines for fast and reliable deployments.
                     </p>
                 </div>
 
-                <!-- Skill Card 3: Software Development (Neon Style) -->
-                <div class="bg-background p-8 rounded-xl neon-card-glow-secondary">
-                    <span class="text-3xl text-secondary mb-4 block neon-glow-text-secondary">💻</span>
+                <!-- Skill Card 3: Software Development -->
+                <div class="bg-background p-8 rounded-xl card-accent-hover">
+                    <span class="text-3xl text-secondary mb-4 block">💻</span>
                     <h3 class="text-xl font-bold text-text-light mb-2">Development Stacks</h3>
                     <p class="text-gray-500 text-base">
                         Proficiency in **Python** and **JavaScript** development, coupled with essential database skills (SQL/NoSQL) for full-stack capability.
@@ -187,7 +165,7 @@
 
             </div>
 
-            <!-- Detailed Skills List (Neon Look) -->
+            <!-- Detailed Skills List -->
             <div class="mt-20">
                 <h3 class="text-2xl font-semibold text-text-light mb-8 text-center">Key Technologies</h3>
                 <div class="flex flex-wrap justify-center gap-3">
@@ -206,13 +184,13 @@
     <!-- Projects Section -->
     <section id="projects" class="py-20 md:py-32 bg-background border-t border-b border-secondary/20">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-4xl font-extrabold text-secondary mb-16 text-center neon-glow-text-secondary">Projects // Work Showcase</h2>
+            <h2 class="text-4xl font-extrabold text-secondary mb-16 text-center subtle-accent-text">Projects // Work Showcase</h2>
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
                 
                 <!-- Project 1: Cloud Focus -->
-                <div class="bg-subtle-dark p-8 rounded-xl neon-card-glow-secondary">
-                    <h3 class="text-3xl font-bold text-primary mb-4 neon-glow-text">Secure Cloud Deployer</h3>
+                <div class="bg-subtle-dark p-8 rounded-xl card-accent-hover">
+                    <h3 class="text-3xl font-bold text-primary mb-4">Secure Cloud Deployer</h3>
                     <p class="text-gray-400 text-lg mb-6">
                         Automated infrastructure provisioning tool for **GCP/AWS** utilizing Terraform. Focused on creating secure, compliant VPCs and managed database instances with enforced encryption-in-transit rules.
                     </p>
@@ -221,14 +199,14 @@
                         <span class="tag-primary">Terraform</span>
                         <span class="tag-secondary">IAC</span>
                     </div>
-                    <a href="#" class="inline-flex items-center text-secondary font-semibold hover:text-primary transition duration-300 neon-glow-text-secondary">
+                    <a href="#" class="inline-flex items-center text-secondary font-semibold hover:text-primary transition duration-300">
                         View Source <span class="ml-2">→</span>
                     </a>
                 </div>
 
                 <!-- Project 2: Cyber Security Focus -->
-                <div class="bg-subtle-dark p-8 rounded-xl neon-card-glow">
-                    <h3 class="text-3xl font-bold text-secondary mb-4 neon-glow-text-secondary">Python Vulnerability Scanner</h3>
+                <div class="bg-subtle-dark p-8 rounded-xl card-accent-hover">
+                    <h3 class="text-3xl font-bold text-secondary mb-4">Python Vulnerability Scanner</h3>
                     <p class="text-gray-400 text-lg mb-6">
                         A custom tool built in Python using Scapy for network packet analysis and vulnerability detection in local area networks, focusing on common misconfigurations and unpatched services.
                     </p>
@@ -237,7 +215,7 @@
                         <span class="tag-secondary">Network Security</span>
                         <span class="tag-primary">Penetration Testing</span>
                     </div>
-                    <a href="#" class="inline-flex items-center text-primary font-semibold hover:text-secondary transition duration-300 neon-glow-text">
+                    <a href="#" class="inline-flex items-center text-primary font-semibold hover:text-secondary transition duration-300">
                         View Source <span class="ml-2">→</span>
                     </a>
                 </div>
@@ -249,13 +227,13 @@
     <!-- Contact Section -->
     <section id="contact" class="py-20 md:py-32 bg-subtle-dark">
         <div class="max-w-xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-4xl font-extrabold text-primary mb-4 neon-glow-text">Connect & Collaborate</h2>
+            <h2 class="text-4xl font-extrabold text-primary mb-4 subtle-accent-text">Connect & Collaborate</h2>
             <p class="text-lg text-gray-400 mb-10">
                 I am actively seeking roles that blend secure development with cloud scalability. Let's discuss your next project.
             </p>
 
-            <!-- Mock Contact Form (Neon Styled) -->
-            <div class="p-8 bg-background rounded-xl border border-secondary/50 neon-border-light">
+            <!-- Mock Contact Form (Dark Mode Styled) -->
+            <div class="p-8 bg-background rounded-xl border border-secondary/50 card-accent-hover">
                 <form class="space-y-6">
                     <div>
                         <input type="text" placeholder="Name" class="w-full p-3 border border-secondary/50 rounded-lg focus:ring-secondary focus:border-secondary transition duration-300 bg-subtle-dark text-text-light" required>
@@ -266,14 +244,14 @@
                     <div>
                         <textarea placeholder="Message" rows="4" class="w-full p-3 border border-secondary/50 rounded-lg focus:ring-secondary focus:border-secondary transition duration-300 bg-subtle-dark text-text-light" required></textarea>
                     </div>
-                    <button type="submit" class="w-full bg-secondary text-background font-bold py-3 rounded-lg border-2 border-secondary neon-button-glow transition duration-300">
+                    <button type="submit" class="w-full bg-secondary text-background font-bold py-3 rounded-lg border-2 border-secondary button-accent-hover transition duration-300">
                         Send Message
                     </button>
                 </form>
             </div>
 
             <div class="mt-10 space-y-2">
-                <p class="text-gray-400">Email: <a href="mailto:jeevan.developer@example.com" class="text-primary hover:text-secondary underline font-medium neon-glow-text">jeevan.developer@example.com</a></p>
+                <p class="text-gray-400">Email: <a href="mailto:jeevan.developer@example.com" class="text-primary hover:text-secondary underline font-medium">jeevan.developer@example.com</a></p>
                 <!-- Add LinkedIn/GitHub links here -->
             </div>
         </div>
